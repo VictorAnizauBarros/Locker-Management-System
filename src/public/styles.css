@@ -1,0 +1,68 @@
+.locker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 15px;
+    margin: 20px;
+  }
+  
+  .locker-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  
+  .locker-item.available {
+    background-color: #e8f5e9; /* Verde claro */
+    color: #388e3c;
+    border-color: #4caf50;
+  }
+  
+  .locker-item.reserved {
+    background-color: #fff3e0; /* Amarelo claro */
+    color: #f57c00;
+    border-color: #ffa726;
+  }
+  
+  .locker-item.unavailable {
+    background-color: #ffebee; /* Vermelho claro */
+    color: #d32f2f;
+    cursor: not-allowed;
+    border-color: #f44336;
+  }
+  
+  .locker-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .locker-icon {
+    font-size: 2rem; /* Tamanho do ícone */
+    margin-bottom: 8px;
+  }
+  
+  .locker-id {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .legend {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+  }
+  
+  .legend-item .locker-icon {
+    font-size: 1.5rem;
+  }
+  
